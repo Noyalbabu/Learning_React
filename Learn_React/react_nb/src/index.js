@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './myStyle.css';
+//import App from './App';
 
 // My first component. When we create a component we create a js function.
 // COMPONENT IS ALWAYS STARTS WITH CAPITAL LETTER eg: Greeting 
@@ -38,10 +39,12 @@ const bookarray = [
 function BookList(){
     return (
     <React.Fragment>
-    <h1 id ='heading'>Amazone Best seller</h1>
+    <h1 className ='heading'>NEWS</h1>
+    <h4 className = 'heading'>Trust is all that matters</h4>
     <section className='bookList'>   
+
         {bookarray.map((detail)=> {
-            const {img , title , author, Description, link, idNo} = detail
+            const {img , title , author, Description, link, idNo} = detail;
             return <Book img = {detail.img} title ={detail.title} author = {detail.author} Description = {detail.Description} link ={detail.link}  
             key = {detail.id}/>;
 
@@ -50,6 +53,23 @@ function BookList(){
     </React.Fragment>
     );
 }
+const EventExamples = () =>{
+    const handleFormInput = () =>{
+        console.log('handle form input');
+    };
+    const handleButtonClick = () =>{
+        alert('handle button Click');
+    };
+    return (<section>
+        <form>
+            <h2>Example Form</h2>
+            <input type = 'text' name ='example' style = {{margin: '1 rem 0'}} onChange={handleFormInput} />
+        </form>
+        <button onClick={handleButtonClick}>Click Me!</button>
+    </section>);
+
+};
+
 
 const Book = (props) =>{
     return(
