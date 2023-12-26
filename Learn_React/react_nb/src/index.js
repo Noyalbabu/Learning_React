@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './myStyle.css';
 //import App from './App';
+import NewsCatalog from './module/NewsCatalog';
 
 // My first component. When we create a component we create a js function.
 // COMPONENT IS ALWAYS STARTS WITH CAPITAL LETTER eg: Greeting 
